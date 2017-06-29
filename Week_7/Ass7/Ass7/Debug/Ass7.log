@@ -1,0 +1,16 @@
+﻿Build started 24/03/2017 16:59:26.
+     1>Project "C:\Users\Alastair Fensome\Documents\c++\Week_7\Ass7\Ass7\Ass7.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Visual Studio 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>c:\users\alastair fensome\documents\c++\week_7\ass7\ass7\source.cpp(63): warning C4584: 'particle' : base-class 'Vector' is already a base-class of 'Minkowski_4'
+                 c:\users\alastair fensome\documents\c++\week_7\ass7\ass7\source.cpp(7) : see declaration of 'Vector'
+                 c:\users\alastair fensome\documents\c++\week_7\ass7\ass7\source.cpp(36) : see declaration of 'Minkowski_4'
+       Link:
+         C:\Program Files (x86)\Visual Studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Alastair Fensome\Documents\c++\Week_7\Ass7\Debug\Ass7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Alastair Fensome\Documents\c++\Week_7\Ass7\Debug\Ass7.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Alastair Fensome\Documents\c++\Week_7\Ass7\Debug\Ass7.lib" /MACHINE:X86 Debug\Source.obj
+         Ass7.vcxproj -> C:\Users\Alastair Fensome\Documents\c++\Week_7\Ass7\Debug\Ass7.exe
+     1>Done Building Project "C:\Users\Alastair Fensome\Documents\c++\Week_7\Ass7\Ass7\Ass7.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.77

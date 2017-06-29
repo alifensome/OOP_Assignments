@@ -1,0 +1,53 @@
+// ass 8 29.03.17 before extra files
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+// Abstract base class as interface only
+class shape
+{
+public:
+	virtual ~shape(){ cout << "Destroying shape" << endl; } // VIRTUAL DESTRUCTOR
+	virtual void info() = 0; // pure virtual funct_2D   
+};
+
+class _3D : public shape
+{
+private:
+	double area, volume;
+public:
+	_3D() : area(0), volume(0) {}
+	~_3D() { cout << "_3D destructor called" << endl; }
+	void info(){ cout << "_3D: area=" << area << "e" << endl; }
+};
+class _2D : public shape
+{
+private:
+	double area, volume;
+public:
+	// Note constructor short-hand!
+	_2D(double A, double V) : area(A), volume(0) {}
+	~_2D() { cout << "_2D destructor called" << endl; }
+	void info(){
+		cout << "_2D: area=" << area <<
+			"2D volume=" << volume << endl;
+	}
+};
+
+int main()
+{
+	// Vector of base class pointers
+	vector<shape*> shape_vector;
+	shape_vector.push_back(new _2D(1, 3));
+	shape_vector.push_back(new _3D);
+	shape_vector[0]->info();
+	shape_vector[1]->info();
+	cout << "shape_vector has size " << shape_vector.size() << endl;
+	for (auto shape_vectorit = shape_vector.begin();
+		shape_vectorit<shape_vector.end();
+		++shape_vectorit) delete *shape_vectorit;
+	shape_vector.clear();
+	cout << "shape_vector now has size " << shape_vector.size() << endl;
+	cin.ignore();
+	return 0;
+}
